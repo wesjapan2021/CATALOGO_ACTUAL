@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #f5f5f5;
+}
+
+.header {
+    max-width: 912px;
+    text-align: center;
+    padding: 20px;
+    background: #5b0a02;
+    color: white;
+    margin: 0 auto 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.logo-container {
+    margin-bottom: 15px;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    max-height: 150px;
+    object-fit: contain;
+}
+
+.header .date {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: white;
+}
+
+#productos {
+    max-width: 912px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.producto {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.producto img {
+    width: 460px;
+    height: 345px;
+    object-fit: contain;
+    margin: 0 auto 15px auto;
+    border-radius: 5px;
+    display: block;
+}
+
+.producto h3 {
+    color: #5b0a02;
+    margin: 10px 0;
+    font-size: 1.2em;
+    width: 100%;
+}
+
+.producto p {
+    width: 100%;
+    text-align: left;
+    margin: 8px 0;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.precio {
+    color: red;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.existencias {
+    color: #716f6e;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.print-button-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.print-button {
+    background-color: #5b0a02;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.print-button:hover {
+    background-color: #7a0d03;
+}
+
+.print-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.error {
+    text-align: center;
+    color: #5b0a02;
+    font-size: 1.2em;
+    padding: 20px;
+}
+
+@media print {
+    .print-button-container {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .producto img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .header h1 {
+        font-size: 1.5em;
+    }
+    
+    .logo {
+        width: 150px;
+    }
+}
